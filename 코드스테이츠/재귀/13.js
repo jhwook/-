@@ -1,5 +1,13 @@
 function findMatryoshka(matryoshka, size) {
-  // TODO: 여기에 코드를 작성합니다.
+  // recursive case
+  if (matryoshka.size === size) {
+    return true;
+  } else if (matryoshka.matryoshka && matryoshka.size > size) {
+    return findMatryoshka(matryoshka.matryoshka, size);
+  }
+
+  // base case
+  return false;
 }
 
 const matryoshka = {
